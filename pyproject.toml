@@ -2,7 +2,7 @@
 name = "uv-install-comfy"
 version = "0.1.0"
 description = "Установка ComfyUI через UV TOML"
-authors = ["NStor <https://dzen.ru/nstor>"
+authors = ["NStor <https://dzen.ru/nstor>"]
 readme = "README.md"
 requires-python = "==3.12.11"
 dependencies = [
