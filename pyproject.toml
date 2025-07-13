@@ -1,0 +1,57 @@
+[project]
+name = "uv-install-comfy"
+version = "0.1.0"
+description = "Установка ComfyUI через UV TOML"
+authors = ["NStor <https://dzen.ru/nstor>"
+readme = "README.md"
+requires-python = "==3.12.11"
+dependencies = [
+    "aiohttp>=3.12.14",
+    "alembic>=1.16.4",
+    "av>=15.0.0",
+    "chardet>=5.2.0",
+    "comfyui-embedded-docs==0.2.4",
+    "comfyui-frontend-package==1.23.4",
+    "comfyui-workflow-templates==0.1.35",
+    "einops>=0.8.1",
+    "gitpython>=3.1.44",
+    "huggingface-hub>=0.33.4",
+    "kornia>=0.8.1",
+    "matrix-client==0.4.0",
+    "numpy>=2.3.1",
+    "pillow>=11.3.0",
+    "pip>=25.1.1",
+    "psutil>=7.0.0",
+    "pydantic~=2.0",
+    "pydantic-settings~=2.0",
+    "pygithub>=2.6.1",
+    "pyyaml>=6.0.2",
+    "rich>=14.0.0",
+    "safetensors>=0.5.3",
+    "scipy>=1.16.0",
+    "sentencepiece>=0.2.0",
+    "soundfile>=0.13.1",
+    "spandrel>=0.4.1",
+    "sqlalchemy>=2.0.41",
+    "tokenizers>=0.21.2",
+    "toml>=0.10.2",
+    "torch>=2.7.1",
+    "torchaudio>=2.7.1",
+    "torchsde>=0.2.6",
+    "torchvision>=0.22.1",
+    "tqdm>=4.67.1",
+    "transformers>=4.53.2",
+    "typer>=0.16.0",
+    "typing-extensions>=4.14.1",
+    "uv>=0.7.20",
+    "yarl>=1.20.1",
+]
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu128", marker = "platform_system != 'Windows'" }]
+torchvision = [{ index = "pytorch-cu128", marker = "platform_system != 'Windows'" }]
+torchaudio = [{ index = "pytorch-cu128", marker = "platform_system != 'Windows'" }]
